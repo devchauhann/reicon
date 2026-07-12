@@ -17,6 +17,7 @@
 - [Vanilla HTML/CDN Guide](https://reicon.dev/usage/vanilla): How to load Reicon via unpkg CDN and use custom element `<re-icon>`.
 - [Figma Plugin](https://reicon.dev/usage/figma): How to use Reicon inside Figma.
 - [VS Code Extension](https://reicon.dev/usage/vscode): Productivity extension for Reicon.
+- [MCP Server](https://reicon.dev/usage/mcp): Agent-facing MCP server and CLI for icon search and code generation (`reicon-mcp`).
 - [Raw SVG Assets](https://reicon.dev/usage/svg): Downloading and using raw SVG paths.
 
 ## References
