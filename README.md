@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://reicon.dev">
-    <img src="public/og-image.png" alt="Reicon — Free Open-Source Icon Library" width="100%" />
+    <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/og-image.png" alt="Reicon — Free Open-Source Icon Library" width="100%" />
   </a>
 </p>
 
@@ -29,7 +29,7 @@
 
 <br/>
 
-## <img src="./public/readme-assets/overview.svg" width="22" height="22" align="center" alt="" />&nbsp; Overview
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/overview.svg" width="22" height="22" align="center" alt="" />&nbsp; Overview
 
 Reicon provides a comprehensive set of SVG icons designed on a strict 24×24 pixel grid. The library is built for high-performance web applications, offering complete tree-shakeability, zero external dependencies, and optimized wrappers for multiple frameworks.
 
@@ -39,23 +39,23 @@ All icons are maintained in two weights:
 
 
 
-## <img src="./public/readme-assets/packages.svg" width="22" height="22" align="center" alt="" />&nbsp; Packages & Ecosystem
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/packages.svg" width="22" height="22" align="center" alt="" />&nbsp; Packages & Ecosystem
 
 | Logo | Package | Version | Downloads | Links |
 | :---: | :--- | :--- | :--- | :--- |
-| <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JS logo" width="30"> | **`reicon`** | [![npm](https://img.shields.io/npm/v/reicon?color=6C5CE7&label=)](https://www.npmjs.com/package/reicon) | ![npm downloads](https://img.shields.io/npm/dm/reicon?color=6C5CE7&label=) | [Guide](docs/javascript/usage.md) · [Source](./packages/reicon) |
-| <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" width="30"> | **`reicon-react`** | [![npm](https://img.shields.io/npm/v/reicon-react?color=6C5CE7&label=)](https://www.npmjs.com/package/reicon-react) | ![npm downloads](https://img.shields.io/npm/dm/reicon-react?color=6C5CE7&label=) | [Guide](docs/react/usage.md) · [Source](./packages/reicon-react) |
-| <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React Native logo" width="30"> | **`reicon-react-native`** | [![npm](https://img.shields.io/npm/v/reicon-react-native?color=6C5CE7&label=)](https://www.npmjs.com/package/reicon-react-native) | ![npm downloads](https://img.shields.io/npm/dm/reicon-react-native?color=6C5CE7&label=) | [Guide](docs/react-native/usage.md) · [Source](./packages/reicon-react-native) |
-| <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue logo" width="30"> | **`reicon-vue`** | [![npm](https://img.shields.io/npm/v/reicon-vue?color=6C5CE7&label=)](https://www.npmjs.com/package/reicon-vue) | ![npm downloads](https://img.shields.io/npm/dm/reicon-vue?color=6C5CE7&label=) | [Guide](docs/vue/usage.md) · [Source](./packages/reicon-vue) |
-| <img src="https://cdn.simpleicons.org/svelte/FF3E00" alt="Svelte logo" width="30"> | **`reicon-svelte`** | [![npm](https://img.shields.io/npm/v/reicon-svelte?color=6C5CE7&label=)](https://www.npmjs.com/package/reicon-svelte) | ![npm downloads](https://img.shields.io/npm/dm/reicon-svelte?color=6C5CE7&label=) | [Guide](docs/svelte/usage.md) · [Source](./packages/reicon-svelte) |
-| <img src="./public/readme-assets/figma.svg" alt="Figma logo" width="28"> | **`reicon-figma`** | — | — | [Guide](docs/figma/usage.md) · [Source](./packages/reicon-figma) |
-| <img src="./public/readme-assets/vscode.svg" alt="VS Code logo" width="30"> | **`reicon-vscode`** | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/DevChauhan.reicon?color=6C5CE7&label=)](https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon) | — | [Guide](docs/vscode/usage.md) · [Source](./packages/reicon-vscode) |
-| <img src="./public/readme-assets/mcp.svg" alt="MCP logo" width="30"> | **`reicon-mcp`** | — | — | [Guide](docs/mcp/usage.md) · [Source](./packages/reicon-mcp) |
-| <img src="./public/readme-assets/svg.svg" alt="SVG logo" width="30"> | **`reicon-svg`** | — | — | [Guide](docs/svg/usage.md) · [Download](./public/reicon-icons.zip) |
+| <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JS logo" width="30"> | **`reicon`** | <a href="https://www.npmjs.com/package/reicon"><img src="https://img.shields.io/npm/v/reicon?color=6C5CE7&label=" alt="npm" /></a> | <img src="https://img.shields.io/npm/dm/reicon?color=6C5CE7&label=" alt="npm downloads" /> | [Guide](docs/javascript/usage.md) · [Source](./packages/reicon) |
+| <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" width="30"> | **`reicon-react`** | <a href="https://www.npmjs.com/package/reicon-react"><img src="https://img.shields.io/npm/v/reicon-react?color=6C5CE7&label=" alt="npm" /></a> | <img src="https://img.shields.io/npm/dm/reicon-react?color=6C5CE7&label=" alt="npm downloads" /> | [Guide](docs/react/usage.md) · [Source](./packages/reicon-react) |
+| <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React Native logo" width="30"> | **`reicon-react-native`** | <a href="https://www.npmjs.com/package/reicon-react-native"><img src="https://img.shields.io/npm/v/reicon-react-native?color=6C5CE7&label=" alt="npm" /></a> | <img src="https://img.shields.io/npm/dm/reicon-react-native?color=6C5CE7&label=" alt="npm downloads" /> | [Guide](docs/react-native/usage.md) · [Source](./packages/reicon-react-native) |
+| <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue logo" width="30"> | **`reicon-vue`** | <a href="https://www.npmjs.com/package/reicon-vue"><img src="https://img.shields.io/npm/v/reicon-vue?color=6C5CE7&label=" alt="npm" /></a> | <img src="https://img.shields.io/npm/dm/reicon-vue?color=6C5CE7&label=" alt="npm downloads" /> | [Guide](docs/vue/usage.md) · [Source](./packages/reicon-vue) |
+| <img src="https://cdn.simpleicons.org/svelte/FF3E00" alt="Svelte logo" width="30"> | **`reicon-svelte`** | <a href="https://www.npmjs.com/package/reicon-svelte"><img src="https://img.shields.io/npm/v/reicon-svelte?color=6C5CE7&label=" alt="npm" /></a> | <img src="https://img.shields.io/npm/dm/reicon-svelte?color=6C5CE7&label=" alt="npm downloads" /> | [Guide](docs/svelte/usage.md) · [Source](./packages/reicon-svelte) |
+| <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/figma.svg" alt="Figma logo" width="28"> | **`reicon-figma`** | — | — | [Guide](docs/figma/usage.md) · [Source](./packages/reicon-figma) |
+| <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/vscode.svg" alt="VS Code logo" width="30"> | **`reicon-vscode`** | <a href="https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon"><img src="https://img.shields.io/visual-studio-marketplace/v/DevChauhan.reicon?color=6C5CE7&label=" alt="vscode marketplace" /></a> | — | [Guide](docs/vscode/usage.md) · [Source](./packages/reicon-vscode) |
+| <img src="https://cdn.simpleicons.org/modelcontextprotocol/6C5CE7" alt="MCP logo" width="30"> | **`reicon-mcp`** | — | — | [Guide](docs/mcp/usage.md) · [Source](./packages/reicon-mcp) |
+| <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/svg.svg" alt="SVG logo" width="30"> | **`reicon-svg`** | — | — | [Guide](docs/svg/usage.md) · [Download](./public/reicon-icons.zip) |
 
 
 
-## <img src="./public/readme-assets/quick-start.svg" width="22" height="22" align="center" alt="" />&nbsp; Quick Start
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/quick-start.svg" width="22" height="22" align="center" alt="" />&nbsp; Quick Start
 
 ### React Usage
 
@@ -119,14 +119,14 @@ Connect AI agents to Reicon via the [Model Context Protocol](https://modelcontex
 Agents can search icons, preview SVG markup, and generate framework-specific code snippets. See the [MCP guide](docs/mcp/usage.md) for tools reference and CLI usage.
 
 
-## <img src="./public/readme-assets/structure.svg" width="22" height="22" align="center" alt="" />&nbsp; Project Structure
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/structure.svg" width="22" height="22" align="center" alt="" />&nbsp; Project Structure
 
 This project is organized as a monorepo holding the core dataset, package compilations, build scripts, and the showcase documentation site.
 
 For a detailed file-by-file breakdown of the directory layout and file responsibilities, see the [Project Structure Guide](docs/project-structure.md).
 
 
-## <img src="./public/readme-assets/design.svg" width="22" height="22" align="center" alt="" />&nbsp; Design System
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/design.svg" width="22" height="22" align="center" alt="" />&nbsp; Design System
 
 The documentation site uses a custom layout system built using CSS custom variables and Tailwind CSS utility tokens.
 
@@ -134,7 +134,7 @@ For the specifications on typography scales, responsive breakpoints, animations,
 
 ---
 
-## <img src="./public/readme-assets/development.svg" width="22" height="22" align="center" alt="" />&nbsp; Development & Building
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/development.svg" width="22" height="22" align="center" alt="" />&nbsp; Development & Building
 
 ### Running the Documentation Site
 To start the React/Vite development server locally for the documentation website:
@@ -157,13 +157,13 @@ The core icons are maintained in `data/icon-data.json`, which acts as the single
 
 
 
-## <img src="./public/readme-assets/contributing.svg" width="22" height="22" align="center" alt="" />&nbsp; Contributing
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/contributing.svg" width="22" height="22" align="center" alt="" />&nbsp; Contributing
 
 Contributions to the codebase, packages, or documentation are welcome. Please refer to our [Contributing Guidelines](.github/CONTRIBUTING.md) for conventions on pull requests, testing, and formatting.
 
 
 
-## <img src="./public/readme-assets/star-history.svg" width="22" height="22" align="center" alt="" />&nbsp; Our Stargazers
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/star-history.svg" width="22" height="22" align="center" alt="" />&nbsp; Our Stargazers
 
 [![Stargazers](https://github-readme-stargazers-five.vercel.app/api/card?username=dqev&repo=reicon&width=1200&theme=Snowy+Minimal+%28Solid%29&rows=4&cols=8&wreath=true&radius=7&card_border=false&blur=1.5&badges=fire&badge_density=0.45&bg_style=solid&v=1)](https://github.com/dqev/reicon/stargazers)
 
@@ -171,7 +171,7 @@ Contributions to the codebase, packages, or documentation are welcome. Please re
 <br/>
 
 
-## <img src="./public/readme-assets/license.svg" width="22" height="22" align="center" alt="" />&nbsp; Credits
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/license.svg" width="22" height="22" align="center" alt="" />&nbsp; Credits
 
 Reicon base icons are built using elements from:
 * [Solar Icons](https://solar-icons.vercel.app/) designed by **480 Design** (CC BY 4.0) and package maintained by [Saoudi H.](https://github.com/saoudi-h/solar-icons) (MIT License)
@@ -179,6 +179,6 @@ Reicon base icons are built using elements from:
 
 
 
-## <img src="./public/readme-assets/license.svg" width="22" height="22" align="center" alt="" />&nbsp; License
+## <img src="https://raw.githubusercontent.com/dqev/reicon/main/public/readme-assets/license.svg" width="22" height="22" align="center" alt="" />&nbsp; License
 
 MIT License - Copyright (c) 2026 [Dev Chauhan](https://devchauhan.in).
