@@ -40,7 +40,7 @@ const FILE_MARKER_CMD = `npx reicon-mcp apply heart --framework react --file src
 
 export default function McpUsage({ markdownContent, copiedField, onCopy }: Props) {
   return (
-    <section id="mcp" className="mb-16 scroll-mt-24">
+    <section id="mcp" data-section className="mb-16 scroll-mt-24">
       <SectionHeader
         id="mcp"
         title="MCP Server"
@@ -65,7 +65,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         <li>Run the same logic from a CLI for scripts and CI</li>
       </ul>
 
-      <div className="mt-8 border-b border-text-base/6 pb-4">
+      <div id="mcp-installation" data-section className="mt-8 scroll-mt-24 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">1. Installation</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           Install from npm or build from the monorepo.
@@ -101,7 +101,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </SyntaxBlock>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-configuration" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">2. MCP Configuration</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           Add the server to your MCP client. With no arguments, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-mcp</code> starts a stdio MCP server.
@@ -129,7 +129,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </SyntaxBlock>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-agent-workflow" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">3. Agent Workflow</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           A typical two-step flow for an agent adding an icon to a React component.
@@ -168,7 +168,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </div>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-tools-reference" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">4. Tools Reference</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           Four MCP tools are exposed by the server.
@@ -209,7 +209,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </table>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-cli-usage" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">5. CLI Usage</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           The same binary supports CLI mode when arguments are provided.
@@ -253,7 +253,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </SyntaxBlock>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-file-insertion" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">6. Scripted File Insertion</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           For CI or scripts without an agent supervising edits, use <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">--file</code> and <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">--marker</code> to insert code directly.
@@ -274,7 +274,7 @@ export default function McpUsage({ markdownContent, copiedField, onCopy }: Props
         </p>
       </div>
 
-      <div className="mt-10 mb-6 border-b border-text-base/6 pb-4">
+      <div id="mcp-offline-operation" data-section className="mt-10 scroll-mt-24 mb-6 border-b border-text-base/6 pb-4">
         <h3 className="text-xl font-serif text-text-base mb-2">7. Offline Operation</h3>
         <p className="text-text-base/60 text-[15px] leading-[1.8]">
           The search index is bundled at build time from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">data/icon-data.json</code>. No network calls are made at runtime — once installed, the server works fully offline.

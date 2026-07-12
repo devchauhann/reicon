@@ -10,7 +10,7 @@ import UsageMobileNav from '../components/usage/sidebar/Mobile';
 import UsageActionsBar from '../components/usage/ActionsBar';
 import { FrameworkIcon } from '../components/usage/framework/icons';
 import { FRAMEWORKS, NAV_ITEMS, Framework } from '../components/usage/framework/constants';
-import { getFrameworkSectionId, getFrameworkLabel, isStandaloneFramework } from '../components/usage/framework/helpers';
+import { getFrameworkSectionId, getFrameworkLabel, getOnThisPageSections, isStandaloneFramework } from '../components/usage/framework/helpers';
 import { usageSidebarStyles } from '../components/usage/sidebar/styles';
 
 import ReactUsage from './usage/ReactUsage';
@@ -88,18 +88,7 @@ export default function UsagePage() {
       { id: 'typescript', label: 'TypeScript' },
       { id: 'troubleshooting', label: 'Troubleshooting' },
     ]
-    : [
-      { id: frameworkSectionId, label: frameworkLabel },
-      ...(isStandaloneFramework(framework) ? [] : [
-        { id: 'props', label: 'Props' },
-        { id: 'weights', label: 'Icon Weights' },
-        { id: 'styling', label: 'Styling & Color' },
-        { id: 'accessibility', label: 'Accessibility' },
-        { id: 'performance', label: 'Performance' },
-        { id: 'typescript', label: 'TypeScript' },
-        { id: 'troubleshooting', label: 'Troubleshooting' },
-      ]),
-    ];
+    : getOnThisPageSections(framework);
 
   const githubUrl = 'https://github.com/dqev/reicon';
 
