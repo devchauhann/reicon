@@ -108,7 +108,7 @@ const pkg = {
     'reicon-mcp': 'bin/run.cjs',
   },
   main: './server/index.js',
-  files: ['bin', 'dist', 'README.md', 'LICENSE'],
+  files: ['bin', 'cli', 'server', 'core', 'data', 'README.md', 'LICENSE'],
   scripts: {
     build: 'node scripts/build.cjs',
   },
