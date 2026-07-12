@@ -8,6 +8,7 @@ export function getFrameworkSectionId(framework: Framework): string {
     case 'svelte': return 'svelte-usage';
     case 'figma': return 'figma';
     case 'vscode': return 'vscode';
+    case 'mcp': return 'mcp';
     case 'svg': return 'svg-usage';
     default: return 'cdn';
   }
@@ -21,11 +22,12 @@ export function getFrameworkLabel(framework: Framework): string {
     case 'svelte': return 'Svelte';
     case 'figma': return 'Figma';
     case 'vscode': return 'VS Code';
+    case 'mcp': return 'MCP Server';
     case 'svg': return 'Raw SVGs';
     default: return 'Vanilla JS / CDN';
   }
 }
 
 export function isStandaloneFramework(framework: Framework): boolean {
-  return framework === 'figma' || framework === 'vscode' || framework === 'svg';
+  return framework === 'figma' || framework === 'vscode' || framework === 'mcp' || framework === 'svg';
 }

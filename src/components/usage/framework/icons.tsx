@@ -34,6 +34,13 @@ export const FigmaIcon = ({ size = 16 }: { size?: number }) => (
     </svg>
 );
 
+export const McpIcon = ({ size = 16 }: { size?: number }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#6C5CE7" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M12 8V16M8 10V14M16 10V14" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+);
+
 export const SvgIcon = ({ size = 16 }: { size?: number }) => (
     <svg width={size} height={size} viewBox="0 0 300 300">
         <g stroke="#000" strokeWidth="38.009">
@@ -55,6 +62,7 @@ export const FrameworkIcon = ({ id, size = 16 }: { id: string; size?: number }) 
     if (id === 'svelte') return <SvelteIcon size={size} />;
     if (id === 'figma') return <FigmaIcon size={size} />;
     if (id === 'vscode') return <VscVscodeInsiders className="text-[#007ACC]" size={size} />;
+    if (id === 'mcp') return <McpIcon size={size} />;
     if (id === 'svg') return <SvgIcon size={size} />;
     return <IoLogoJavascript className="text-yellow-400" size={size} />;
 };

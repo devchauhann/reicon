@@ -20,6 +20,7 @@ import SvelteUsage from './usage/SvelteUsage';
 import CdnUsage from './usage/CdnUsage';
 import FigmaUsage from './usage/FigmaUsage';
 import VscodeUsage from './usage/VscodeUsage';
+import McpUsage from './usage/McpUsage';
 import SvgUsage from './usage/SvgUsage';
 import PropsTable from './usage/PropsTable';
 import Weights from './usage/Weights';
@@ -36,6 +37,7 @@ import vueDocs from '../../docs/vue/usage.md?raw';
 import svelteDocs from '../../docs/svelte/usage.md?raw';
 import figmaDocs from '../../docs/figma/usage.md?raw';
 import vscodeDocs from '../../docs/vscode/usage.md?raw';
+import mcpDocs from '../../docs/mcp/usage.md?raw';
 import svgDocs from '../../docs/svg/usage.md?raw';
 import propsDocs from '../../docs/shared/props.md?raw';
 import weightsDocs from '../../docs/shared/weights.md?raw';
@@ -356,6 +358,8 @@ export default function UsagePage() {
               <FigmaUsage markdownContent={figmaDocs} />
             ) : framework === 'vscode' ? (
               <VscodeUsage markdownContent={vscodeDocs} copiedField={copiedField} onCopy={copyToClipboard} />
+            ) : framework === 'mcp' ? (
+              <McpUsage markdownContent={mcpDocs} copiedField={copiedField} onCopy={copyToClipboard} />
             ) : framework === 'svg' ? (
               <SvgUsage markdownContent={svgDocs} copiedField={copiedField} onCopy={copyToClipboard} />
             ) : (

@@ -6,6 +6,7 @@ export const FRAMEWORKS = [
     { id: 'svelte', label: 'Svelte', icon: 'svelte', color: '#FF3E00' },
     { id: 'figma', label: 'Figma', icon: 'figma', color: '#F24E1E' },
     { id: 'vscode', label: 'VS Code', icon: 'vscode', color: '#007ACC' },
+    { id: 'mcp', label: 'MCP Server', icon: 'mcp', color: '#6C5CE7' },
     { id: 'svg', label: 'Raw SVGs', icon: 'svg', color: '#4285F4' },
 ] as const;
 

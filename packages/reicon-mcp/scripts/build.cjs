@@ -107,7 +107,7 @@ const pkg = {
   bin: {
     'reicon-mcp': 'bin/run.cjs',
   },
-  main: './dist/server/index.js',
+  main: './server/index.js',
   files: ['bin', 'dist', 'README.md', 'LICENSE'],
   scripts: {
     build: 'node scripts/build.cjs',
@@ -137,5 +137,6 @@ fs.writeFileSync(path.join(ROOT, 'dist', 'package.json'), JSON.stringify(pkg, nu
 fs.copyFileSync(path.join(ROOT, 'README.md'), path.join(ROOT, 'dist', 'README.md'));
 fs.copyFileSync(path.join(ROOT, 'LICENSE'), path.join(ROOT, 'dist', 'LICENSE'));
 fs.cpSync(path.join(ROOT, 'bin'), path.join(ROOT, 'dist', 'bin'), { recursive: true });
+fs.chmodSync(path.join(ROOT, 'dist', 'bin', 'run.cjs'), 0o755);
 
 console.log('reicon-mcp build complete');

@@ -1,7 +1,7 @@
 import { FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { VscVscodeInsiders } from 'react-icons/vsc';
-import { FigmaIcon, SvelteIcon, VueIcon, SvgIcon } from '../../components/usage/framework/icons';
+import { FigmaIcon, McpIcon, SvelteIcon, VueIcon, SvgIcon } from '../../components/usage/framework/icons';
 
 export interface PackageItem {
     id: string;
@@ -101,6 +101,17 @@ export const TOOLS: ToolItem[] = [
         guideUrl: '/usage/vscode',
         primaryAction: { label: 'Use', href: 'https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon' },
         sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-vscode',
+    },
+    {
+        id: 'mcp',
+        name: 'reicon-mcp',
+        badge: { label: 'MCP Server', color: '#6C5CE7' },
+        version: 'v1.0.0',
+        description: 'Search, preview, and apply Reicon icons from AI agents and automation tools via MCP or CLI.',
+        icon: <McpIcon size={48} />,
+        guideUrl: '/usage/mcp',
+        primaryAction: { label: 'Guide', href: '/usage/mcp' },
+        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-mcp',
     },
 ];
 
