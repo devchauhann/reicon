@@ -11,21 +11,21 @@ export default function PackagesPage() {
     <div className="min-h-screen bg-bg-base flex flex-col">
       <Helmet>
         <title>Packages & Integrations — Reicon | React, React Native, Vue, Svelte, Figma & VS Code</title>
-        <meta name="description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, download raw SVG assets, or get the official Figma plugin and VS Code extension." />
+        <meta name="description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, download raw SVG assets, or get the Figma plugin, VS Code extension, and MCP Server for AI agents." />
         <link rel="canonical" href="https://reicon.dev/packages" />
         <meta name="keywords" content="reicon packages, reicon-react, reicon-react-native, reicon-vue, reicon-svelte, reicon-figma, reicon-vscode, Figma icon plugin, VS Code icon extension, SVG download, React icon library, React Native icons, Vue icons, Svelte icons" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://reicon.dev/packages" />
         <meta property="og:site_name" content="Reicon" />
         <meta property="og:title" content="Packages & Integrations — Reicon" />
-        <meta property="og:description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, download raw SVG assets, or get the official Figma plugin and VS Code extension." />
+        <meta property="og:description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, download raw SVG assets, or get the Figma plugin, VS Code extension, and MCP Server for AI agents." />
         <meta property="og:image" content="https://reicon.dev/og-image.png?v=4" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@reicon_dev" />
         <meta name="twitter:title" content="Packages & Integrations — Reicon" />
-        <meta name="twitter:description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, and more." />
+        <meta name="twitter:description" content="Get official Reicon integrations. Install wrappers for React, React Native, Vue 3, Svelte, MCP Server, and more." />
         <meta name="twitter:image" content="https://reicon.dev/og-image.png?v=4" />
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',

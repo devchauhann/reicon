@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Copy } from 'reicon-react';
-import { SiHtml5, SiJavascript, SiReact, SiSvelte } from 'react-icons/si';
+import { SiHtml5, SiJavascript, SiModelcontextprotocol, SiReact, SiSvelte } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 
 function IntegrationCard({ icon, title, lines, copyText, guideUrl }: {
@@ -114,7 +114,7 @@ export default function Integrations() {
                 <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#6C5CE7] mb-2">Integrations</div>
                 <h2 className="font-serif text-[clamp(26px,3.6vw,46px)] text-text-base leading-[1.15] tracking-[-0.02em] mb-3">Works everywhere you do.</h2>
                 <p className="text-[15px] text-text-base/45 leading-[1.65] max-w-[490px] mx-auto">
-                    Easy integration with CDN, React, React Native, Vue, Svelte, and JavaScript.
+                    Easy integration with CDN, React, React Native, Vue, Svelte, JavaScript, and MCP Server for AI agents.
                 </p>
             </div>
 
@@ -219,6 +219,25 @@ export default function Integrations() {
                         <NpmInstall pkg="reicon-svelte" />
                         <ImportLine name="Home" from="reicon-svelte" />
                         <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
+                    </>}
+                />
+
+                {/* MCP Server */}
+                <IntegrationCard
+                    icon={<SiModelcontextprotocol size={16} color="#6C5CE7" />}
+                    title="MCP Server"
+                    guideUrl="/usage/mcp"
+                    copyText={`{\n  "mcpServers": {\n    "reicon": {\n      "command": "npx",\n      "args": ["reicon-mcp"]\n    }\n  }\n}`}
+                    lines={<>
+                        <div className="text-text-base/45 text-[12px] mb-2">MCP client config</div>
+                        <div><span className="text-text-base/70">{'{'}</span></div>
+                        <div className="pl-4"><span className="text-[#e5c07b]">"mcpServers"</span><span className="text-text-base/70">: {'{'}</span></div>
+                        <div className="pl-8"><span className="text-[#e5c07b]">"reicon"</span><span className="text-text-base/70">: {'{'}</span></div>
+                        <div className="pl-12"><span className="text-[#e5c07b]">"command"</span><span className="text-text-base/70">: </span><span className="text-[#98c379]">"npx"</span></div>
+                        <div className="pl-12"><span className="text-[#e5c07b]">"args"</span><span className="text-text-base/70">: [</span><span className="text-[#98c379]">"reicon-mcp"</span><span className="text-text-base/70">]</span></div>
+                        <div className="pl-8"><span className="text-text-base/70">{'}'}</span></div>
+                        <div className="pl-4"><span className="text-text-base/70">{'}'}</span></div>
+                        <div><span className="text-text-base/70">{'}'}</span></div>
                     </>}
                 />
 

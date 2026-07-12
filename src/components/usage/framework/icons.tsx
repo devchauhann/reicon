@@ -1,7 +1,7 @@
 import { FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { VscVscodeInsiders } from 'react-icons/vsc';
-import { SiSvelte } from 'react-icons/si';
+import { SiModelcontextprotocol, SiSvelte } from 'react-icons/si';
 
 export const VueIcon = ({ size = 16 }: { size?: number }) => (
     <svg width={size} height={size} viewBox="0 0 122.88 106.42" fill="none">
@@ -35,10 +35,7 @@ export const FigmaIcon = ({ size = 16 }: { size?: number }) => (
 );
 
 export const McpIcon = ({ size = 16 }: { size?: number }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#6C5CE7" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M12 8V16M8 10V14M16 10V14" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
+    <SiModelcontextprotocol className="text-[#6C5CE7]" size={size} />
 );
 
 export const SvgIcon = ({ size = 16 }: { size?: number }) => (

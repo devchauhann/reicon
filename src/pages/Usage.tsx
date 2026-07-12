@@ -102,8 +102,22 @@ export default function UsagePage() {
     ];
 
   const githubUrl = 'https://github.com/dqev/reicon';
-  const activePath = framework === 'vanilla' ? 'javascript/usage.md' : framework === 'react' ? 'react/usage.md' : 'vue/usage.md';
-  const githubEditUrl = `https://github.com/dqev/reicon/edit/main/docs/${activePath}`;
+
+  const getDocsPath = () => {
+    switch (framework) {
+      case 'react': return 'react/usage.md';
+      case 'react-native': return 'react-native/usage.md';
+      case 'vue': return 'vue/usage.md';
+      case 'svelte': return 'svelte/usage.md';
+      case 'figma': return 'figma/usage.md';
+      case 'vscode': return 'vscode/usage.md';
+      case 'mcp': return 'mcp/usage.md';
+      case 'svg': return 'svg/usage.md';
+      default: return 'javascript/usage.md';
+    }
+  };
+
+  const githubEditUrl = `https://github.com/dqev/reicon/edit/main/docs/${getDocsPath()}`;
 
   // ── helpers ──────────────────────────────────────────────────────────────
 
@@ -140,6 +154,7 @@ export default function UsagePage() {
       case 'svelte': return svelteDocs;
       case 'figma': return figmaDocs;
       case 'vscode': return vscodeDocs;
+      case 'mcp': return mcpDocs;
       case 'svg': return svgDocs;
       default: return vanillaDocs;
     }
@@ -242,20 +257,20 @@ export default function UsagePage() {
     <div className="min-h-screen bg-bg-base flex flex-col">
       <Helmet>
         <title>Usage Guide & Documentation — Reicon Icons</title>
-        <meta name="description" content="Integrate Reicon icons into your project. Complete documentation for Vanilla JS, React, React Native, Vue, Svelte, Figma, VS Code, and direct SVG integration." />
+        <meta name="description" content="Integrate Reicon icons into your project. Complete documentation for Vanilla JS, React, React Native, Vue, Svelte, Figma, VS Code, MCP Server, and direct SVG integration." />
         <link rel="canonical" href="https://reicon.dev/usage" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://reicon.dev/usage" />
         <meta property="og:site_name" content="Reicon" />
         <meta property="og:title" content="Usage Guide & Documentation — Reicon" />
-        <meta property="og:description" content="Integrate Reicon icons into your project. Complete documentation for Vanilla JS, React, React Native, Vue, Svelte, Figma, VS Code, and direct SVG integration." />
+        <meta property="og:description" content="Integrate Reicon icons into your project. Complete documentation for Vanilla JS, React, React Native, Vue, Svelte, Figma, VS Code, MCP Server, and direct SVG integration." />
         <meta property="og:image" content="https://reicon.dev/og-image.png?v=4" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@reicon_dev" />
         <meta name="twitter:title" content="Usage Guide — Reicon" />
-        <meta name="twitter:description" content="Integrate Reicon icons into your project. Complete documentation for React, React Native, Vue, Svelte, and more." />
+        <meta name="twitter:description" content="Integrate Reicon icons into your project. Complete documentation for React, React Native, Vue, Svelte, MCP Server, and more." />
         <meta name="twitter:image" content="https://reicon.dev/og-image.png?v=4" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
