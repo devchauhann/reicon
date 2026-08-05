@@ -108,18 +108,33 @@ export default function IllustrationDetail() {
   };
 
   const handleDownloadSvg = () => {
+    if (!svgCode) {
+      flashToast('error');
+      return;
+    }
+
+    const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+    const url = URL.createObjectURL(blob);
+    
     const a = document.createElement('a');
-    a.href = cdnUrl;
-    a.download = `${currentSlug}.svg`;
-    a.target = '_blank';
+    a.href = url;
+    a.download = `${currentSlug}-${exportSize}x${exportSize}.svg`;
     a.click();
+
+    URL.revokeObjectURL(url);
     flashToast('download-svg');
   };
 
   const handleDownloadPng = async () => {
     try {
+      if (!svgCode) {
+        flashToast('error');
+        return;
+      }
+      const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+
       const img = new Image();
-      img.crossOrigin = 'anonymous';
       img.onload = () => {
         const canvas = document.createElement('canvas');
         canvas.width = exportSize;
@@ -130,12 +145,13 @@ export default function IllustrationDetail() {
           const pngUrl = canvas.toDataURL('image/png');
           const a = document.createElement('a');
           a.href = pngUrl;
-          a.download = `${currentSlug}.png`;
+          a.download = `${currentSlug}-${exportSize}x${exportSize}.png`;
           a.click();
+          URL.revokeObjectURL(url);
           flashToast('download-png');
         }
       };
-      img.src = cdnUrl;
+      img.src = url;
     } catch {
       flashToast('error');
     }
