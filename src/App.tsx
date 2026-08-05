@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import SmoothScroll from './components/layout/SmoothScroll';
 import CookieConsent from './components/layout/CookieConsent';
 import IllustrationBanner from './components/layout/IllustrationBanner';
@@ -76,6 +77,7 @@ export default function App() {
           <Layout />
           <CookieConsent />
           <IllustrationBanner />
+          <SpeedInsights />
         </SmoothScroll>
       </BrowserRouter>
     </ThemeProvider>
