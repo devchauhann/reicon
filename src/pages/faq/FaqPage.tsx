@@ -51,8 +51,9 @@ const FAQ_CATEGORIES = [
     icon: 'compass',
     items: [
       {
-        id: 'what-is-reicon',
-        question: 'What is Reicon?',
+        id: "what-is-reicon",
+        question: "What is Reicon?",
+        markdownAnswer: "Reicon is an open-source vector icon library designed for digital interfaces. It includes 2,700+ handcrafted, pixel-perfect SVG icons in Outline and Filled weights. Official packages are available for React (reicon-react), React Native (reicon-react-native), Vue 3 (reicon-vue), Svelte (reicon-svelte), and vanilla JavaScript, plus a CDN script for HTML pages.",
         answer: (
           <p>
             Reicon is an open-source vector icon library designed for digital interfaces. It includes 2,700+ handcrafted, pixel-perfect SVG icons in Outline and Filled weights. Official packages are available for React (<Code>reicon-react</Code>), React Native (<Code>reicon-react-native</Code>), Vue 3 (<Code>reicon-vue</Code>), Svelte (<Code>reicon-svelte</Code>), and vanilla JavaScript, plus a CDN script for HTML pages.
@@ -62,6 +63,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'is-it-free',
         question: 'Is Reicon completely free?',
+        markdownAnswer: 'Yes, Reicon is 100% free and open-source under the MIT License. Use it in personal, commercial, education, or open-source projects — no attribution required (though always appreciated!).',
         answer: (
           <p>
             Yes, Reicon is 100% free and open-source under the{' '}
@@ -72,6 +74,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'commercial-use',
         question: 'Can I use it in commercial projects?',
+        markdownAnswer: 'Absolutely. Commercial use is fully allowed. Bundle Reicon into templates, websites, SaaS products, or mobile apps — even ones you charge for.',
         answer: (
           <p>
             Absolutely. Commercial use is fully allowed. Bundle Reicon into templates, websites, SaaS products, or mobile apps — even ones you charge for.
@@ -88,6 +91,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'grid-size',
         question: 'What grid size is used?',
+        markdownAnswer: 'Every icon is drawn on a strict 24×24 pixel grid with predefined baseline strokes. This guarantees the icons stay pixel-perfect and sharp at any size, from 12px to large header formats.',
         answer: (
           <p>
             Every icon is drawn on a strict <strong>24×24 pixel grid</strong> with predefined baseline strokes. This guarantees the icons stay pixel-perfect and sharp at any size, from 12px to large header formats.
@@ -97,6 +101,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'icon-weights',
         question: 'How are weights handled?',
+        markdownAnswer: 'Reicon does not auto-generate weights. Each is handcrafted:\n- Outline: Clean stroked paths (default 1.5px). Customizable via the strokeWidth prop.\n- Filled: Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).',
         answer: (
           <>
             <p>Reicon does not auto-generate weights. Each is handcrafted:</p>
@@ -110,6 +115,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'tree-shaking',
         question: 'Does it support tree-shaking?',
+        markdownAnswer: 'Yes! All packages — reicon-react, reicon-react-native, reicon-vue, and reicon-svelte — are bundled as ES modules and declare "sideEffects": false. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.',
         answer: (
           <p>
             Yes! All packages — <Code>reicon-react</Code>, <Code>reicon-react-native</Code>, <Code>reicon-vue</Code>, and <Code>reicon-svelte</Code> — are bundled as ES modules and declare <Code>"sideEffects": false</Code>. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.
@@ -126,6 +132,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'figma-library',
         question: 'Is there a Figma library?',
+        markdownAnswer: 'Yes! A community Figma file with all vector master components is maintained. Search for "Reicon" in the Figma Community to duplicate the official file and design with the same visual assets.',
         answer: (
           <p>
             Yes! A community Figma file with all vector master components is maintained. Search for "Reicon" in the Figma Community to duplicate the official file and design with the same visual assets.
@@ -135,6 +142,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'request-icon',
         question: 'How do I request a new icon?',
+        markdownAnswer: 'Open an Issue on our GitHub Issues tracker using the "Icon Request" template. We review requests weekly and design new sets based on popularity.',
         answer: (
           <p>
             Open an Issue on our{' '}
@@ -146,6 +154,7 @@ const FAQ_CATEGORIES = [
       {
         id: 'contributing',
         question: 'How do I contribute?',
+        markdownAnswer: 'We love contributions! You can help with code, type definitions, package updates, or new SVG icons. Read our contributing guide in the GitHub repository, fork the codebase, and open a Pull Request.',
         answer: (
           <p>
             We love contributions! You can help with code, type definitions, package updates, or new SVG icons. Read our contributing guide in the GitHub repository, fork the codebase, and open a Pull Request.
@@ -234,11 +243,12 @@ export default function FaqPage() {
 
   const handleCopyPageMarkdown = async () => {
     try {
-      let md = '# Frequently Asked Questions\n\n';
+      let md = "# Frequently Asked Questions\n\n";
       FAQ_CATEGORIES.forEach((cat) => {
         md += `## ${cat.title}\n\n`;
         cat.items.forEach((item) => {
           md += `### ${item.question}\n\n`;
+          md += `${item.markdownAnswer}\n\n`;
         });
       });
       await navigator.clipboard.writeText(md);
@@ -256,6 +266,7 @@ export default function FaqPage() {
       md += `## ${cat.title}\n\n`;
       cat.items.forEach((item) => {
         md += `### ${item.question}\n\n`;
+        md += `${item.markdownAnswer}\n\n`;
       });
     });
     try { await navigator.clipboard.writeText(md); } catch { /* silent */ }
