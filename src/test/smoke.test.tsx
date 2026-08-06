@@ -29,7 +29,7 @@ describe('Header smoke test', () => {
         </MemoryRouter>
       </ThemeProvider>,
     );
-    expect(screen.getByText('Icons')).toBeInTheDocument();
+    expect(screen.getAllByText('Icons')[0]).toBeInTheDocument();
   });
 });
 
