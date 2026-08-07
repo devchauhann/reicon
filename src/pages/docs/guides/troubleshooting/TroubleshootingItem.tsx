@@ -17,7 +17,7 @@ export default function TroubleshootingItem({ item, copiedField, onCopy }: Troub
         onCopy={() => onCopy(item.copyText, item.copyField)}
         copied={copiedField === item.copyField}
       >
-        <span className="text-text-base/70">{item.copyText}</span>
+        {item.syntaxNode ? item.syntaxNode : <span className="text-text-base/70">{item.copyText}</span>}
       </SyntaxBlock>
     </>
   );
