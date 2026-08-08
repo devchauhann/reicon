@@ -15,6 +15,8 @@ const IconsPage = lazyWithRetry(() => import('./pages/icons/IconsPage'));
 const IconDetail = lazyWithRetry(() => import('./pages/icon/IconDetail'));
 const IllustrationPage = lazyWithRetry(() => import('./pages/illustration/IllustrationPage'));
 const IllustrationDetail = lazyWithRetry(() => import('./pages/illustration/IllustrationDetail'));
+const LogoPage = lazyWithRetry(() => import('./pages/logo/LogoPage'));
+const LogoDetail = lazyWithRetry(() => import('./pages/logo/LogoDetail'));
 
 const DocsPage = lazyWithRetry(() => import('./pages/docs/DocsPage'));
 const PackagesPage = lazyWithRetry(() => import('./pages/packages/PackagesPage'));
@@ -34,7 +36,7 @@ function ScrollToTop() {
 
 function Layout() {
   const { pathname } = useLocation();
-  const hideFooter = pathname === '/icons' || pathname === '/illustration' || pathname.startsWith('/docs');
+  const hideFooter = pathname === '/icons' || pathname === '/illustration' || pathname === '/logos' || pathname === '/logo' || pathname.startsWith('/docs');
 
   return (
     <div className="min-h-screen bg-bg-base flex flex-col">
@@ -48,6 +50,10 @@ function Layout() {
 
             <Route path="/illustration" element={<IllustrationPage />} />
             <Route path="/illustration/:name" element={<IllustrationDetail />} />
+
+            <Route path="/logos" element={<LogoPage />} />
+            <Route path="/logo" element={<LogoPage />} />
+            <Route path="/logo/:name" element={<LogoDetail />} />
 
             <Route path="/docs" element={<DocsPage />} />
             <Route path="/docs/:framework" element={<DocsPage />} />

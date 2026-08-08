@@ -5,17 +5,16 @@ import IllustrationSidebar from './IllustrationSidebar';
 import IllustrationSearchBar from './IllustrationSearchBar';
 import IconCount from '../icons/IconCount';
 import IllustrationGrid from './IllustrationGrid';
-import IllustrationPagination from './IllustrationPagination';
+import LoadMoreButton from '../../components/ui/LoadMoreButton';
 import {
   IllustrationItem,
-  IllustrationCategoriesMeta,
   loadIllustrationCategories,
   loadFeaturedIllustrations,
   loadIllustrationGroup,
   searchIllustrations,
 } from '../../lib/illustration-data';
 
-const PAGE_SIZE = 120;
+const BATCH_SIZE = 60;
 
 export default function IllustrationPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,13 +23,12 @@ export default function IllustrationPage() {
   const initialSub = searchParams.get('subcategory') || 'all';
   const initialQ = searchParams.get('q') || '';
   const initialSize = searchParams.get('size') || '100';
-  const initialPage = parseInt(searchParams.get('page') || '1', 10);
 
   const [activeCategory, setActiveCategory] = useState(initialCat);
   const [activeSubcategory, setActiveSubcategory] = useState(initialSub);
   const [searchQuery, setSearchQuery] = useState(initialQ);
   const [activeSize, setActiveSize] = useState(initialSize);
-  const [currentPage, setCurrentPage] = useState(initialPage > 0 ? initialPage : 1);
+  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
 
   const deferredSearchQuery = useDeferredValue(searchQuery);
 
@@ -45,13 +43,11 @@ export default function IllustrationPage() {
     const sub = searchParams.get('subcategory') || 'all';
     const q = searchParams.get('q') || '';
     const sz = searchParams.get('size') || '100';
-    const p = parseInt(searchParams.get('page') || '1', 10);
 
     setActiveCategory(cat);
     setActiveSubcategory(sub);
     setSearchQuery(q);
     setActiveSize(sz);
-    setCurrentPage(p > 0 ? p : 1);
   }, [searchParams]);
 
   // Load items when category or subcategory changes
@@ -96,12 +92,12 @@ export default function IllustrationPage() {
     return () => {
       cancelled = true;
     };
-  }, [deferredSearchQuery, items]);
+  }, [deferredSearchQuery, items, activeCategory]);
 
   const handleCategoryChange = (category: string, subcategory: string = 'all') => {
     setActiveCategory(category);
     setActiveSubcategory(subcategory);
-    setCurrentPage(1);
+    setVisibleCount(BATCH_SIZE);
 
     const newParams = new URLSearchParams(searchParams);
     if (category !== 'all') {
@@ -115,7 +111,6 @@ export default function IllustrationPage() {
       newParams.delete('category');
       newParams.delete('subcategory');
     }
-    newParams.delete('page');
     setSearchParams(newParams, { replace: true });
   };
 
@@ -128,36 +123,25 @@ export default function IllustrationPage() {
 
   const handleSearchChange = (val: string) => {
     setSearchQuery(val);
-    setCurrentPage(1);
+    setVisibleCount(BATCH_SIZE);
     const newParams = new URLSearchParams(searchParams);
     if (val.trim()) {
       newParams.set('q', val);
     } else {
       newParams.delete('q');
     }
-    newParams.delete('page');
     setSearchParams(newParams, { replace: true });
-  };
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    const newParams = new URLSearchParams(searchParams);
-    if (page > 1) {
-      newParams.set('page', page.toString());
-    } else {
-      newParams.delete('page');
-    }
-    setSearchParams(newParams, { replace: true });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const displaySize = parseInt(activeSize) || 100;
-  const totalPages = Math.ceil(filteredItems.length / PAGE_SIZE);
 
-  const paginatedItems = useMemo(() => {
-    const start = (currentPage - 1) * PAGE_SIZE;
-    return filteredItems.slice(start, start + PAGE_SIZE);
-  }, [filteredItems, currentPage]);
+  const visibleItems = useMemo(() => {
+    return filteredItems.slice(0, visibleCount);
+  }, [filteredItems, visibleCount]);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + BATCH_SIZE);
+  };
 
   return (
     <div className="flex-1">
@@ -186,7 +170,7 @@ export default function IllustrationPage() {
           <IconCount count={filteredItems.length} ready={ready} />
 
           <IllustrationGrid
-            items={paginatedItems}
+            items={visibleItems}
             displaySize={displaySize}
             ready={ready}
             searchQuery={searchQuery}
@@ -194,12 +178,11 @@ export default function IllustrationPage() {
           />
 
           {ready && filteredItems.length > 0 && (
-            <IllustrationPagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              totalItems={filteredItems.length}
-              pageSize={PAGE_SIZE}
-              onPageChange={handlePageChange}
+            <LoadMoreButton
+              visibleCount={visibleCount}
+              totalCount={filteredItems.length}
+              onLoadMore={handleLoadMore}
+              itemType="illustrations"
             />
           )}
         </main>

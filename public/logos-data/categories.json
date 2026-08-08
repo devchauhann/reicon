@@ -1,0 +1,453 @@
+{
+  "total_brands": 4910,
+  "categories": [
+    {
+      "name": "Accessibility",
+      "count": 1
+    },
+    {
+      "name": "Advertising",
+      "count": 2
+    },
+    {
+      "name": "Agency",
+      "count": 2
+    },
+    {
+      "name": "AI",
+      "count": 278
+    },
+    {
+      "name": "Analytics",
+      "count": 25
+    },
+    {
+      "name": "App Services",
+      "count": 3
+    },
+    {
+      "name": "application",
+      "count": 57
+    },
+    {
+      "name": "Auth",
+      "count": 4
+    },
+    {
+      "name": "Authentication",
+      "count": 16
+    },
+    {
+      "name": "Automation",
+      "count": 5
+    },
+    {
+      "name": "Automotive",
+      "count": 60
+    },
+    {
+      "name": "Aviation",
+      "count": 42
+    },
+    {
+      "name": "Booking",
+      "count": 2
+    },
+    {
+      "name": "Browser",
+      "count": 18
+    },
+    {
+      "name": "Business",
+      "count": 3
+    },
+    {
+      "name": "Canonical",
+      "count": 4
+    },
+    {
+      "name": "Caravaning",
+      "count": 1
+    },
+    {
+      "name": "Cloud",
+      "count": 71
+    },
+    {
+      "name": "CMS",
+      "count": 31
+    },
+    {
+      "name": "Communication",
+      "count": 15
+    },
+    {
+      "name": "Community",
+      "count": 458
+    },
+    {
+      "name": "Compiler",
+      "count": 17
+    },
+    {
+      "name": "Config",
+      "count": 2
+    },
+    {
+      "name": "Construction",
+      "count": 1
+    },
+    {
+      "name": "Crypto",
+      "count": 31
+    },
+    {
+      "name": "Cybersecurity",
+      "count": 3
+    },
+    {
+      "name": "Data",
+      "count": 1
+    },
+    {
+      "name": "Database",
+      "count": 84
+    },
+    {
+      "name": "Design",
+      "count": 115
+    },
+    {
+      "name": "Design Tools",
+      "count": 1
+    },
+    {
+      "name": "Developer Tools",
+      "count": 1
+    },
+    {
+      "name": "DevOps",
+      "count": 5
+    },
+    {
+      "name": "Devtool",
+      "count": 606
+    },
+    {
+      "name": "DevTool",
+      "count": 156
+    },
+    {
+      "name": "DEX",
+      "count": 1
+    },
+    {
+      "name": "E-commerce",
+      "count": 13
+    },
+    {
+      "name": "Ecommerce",
+      "count": 2
+    },
+    {
+      "name": "Editor",
+      "count": 43
+    },
+    {
+      "name": "Education",
+      "count": 32
+    },
+    {
+      "name": "Energy",
+      "count": 1
+    },
+    {
+      "name": "Entertainment",
+      "count": 73
+    },
+    {
+      "name": "Exchange",
+      "count": 1
+    },
+    {
+      "name": "File Sharing",
+      "count": 1
+    },
+    {
+      "name": "Finance",
+      "count": 117
+    },
+    {
+      "name": "Food",
+      "count": 35
+    },
+    {
+      "name": "Food & Beverage",
+      "count": 4
+    },
+    {
+      "name": "Framework",
+      "count": 120
+    },
+    {
+      "name": "Gaming",
+      "count": 31
+    },
+    {
+      "name": "Google",
+      "count": 102
+    },
+    {
+      "name": "Google 2026",
+      "count": 14
+    },
+    {
+      "name": "Hardware",
+      "count": 55
+    },
+    {
+      "name": "Health",
+      "count": 4
+    },
+    {
+      "name": "Healthcare",
+      "count": 1
+    },
+    {
+      "name": "Hospitality",
+      "count": 1
+    },
+    {
+      "name": "Hosting",
+      "count": 42
+    },
+    {
+      "name": "HR",
+      "count": 2
+    },
+    {
+      "name": "Icon",
+      "count": 1
+    },
+    {
+      "name": "Infrastructure",
+      "count": 3
+    },
+    {
+      "name": "Insurance",
+      "count": 1
+    },
+    {
+      "name": "Investment",
+      "count": 1
+    },
+    {
+      "name": "IoT",
+      "count": 9
+    },
+    {
+      "name": "Jewelry",
+      "count": 1
+    },
+    {
+      "name": "Language",
+      "count": 96
+    },
+    {
+      "name": "Ledger",
+      "count": 1
+    },
+    {
+      "name": "Library",
+      "count": 149
+    },
+    {
+      "name": "Linux",
+      "count": 50
+    },
+    {
+      "name": "Livestreaming",
+      "count": 1
+    },
+    {
+      "name": "Logistics",
+      "count": 1
+    },
+    {
+      "name": "Marketplace",
+      "count": 6
+    },
+    {
+      "name": "Media",
+      "count": 15
+    },
+    {
+      "name": "Microsoft",
+      "count": 21
+    },
+    {
+      "name": "Mobile App",
+      "count": 4
+    },
+    {
+      "name": "model",
+      "count": 30
+    },
+    {
+      "name": "Monitoring",
+      "count": 2
+    },
+    {
+      "name": "Monorepo",
+      "count": 2
+    },
+    {
+      "name": "Music",
+      "count": 16
+    },
+    {
+      "name": "Network",
+      "count": 2
+    },
+    {
+      "name": "Networking",
+      "count": 6
+    },
+    {
+      "name": "News",
+      "count": 3
+    },
+    {
+      "name": "Non-profit",
+      "count": 2
+    },
+    {
+      "name": "Nuxt",
+      "count": 6
+    },
+    {
+      "name": "OS",
+      "count": 16
+    },
+    {
+      "name": "Other",
+      "count": 65
+    },
+    {
+      "name": "Payment",
+      "count": 29
+    },
+    {
+      "name": "Photography",
+      "count": 1
+    },
+    {
+      "name": "Platform",
+      "count": 2427
+    },
+    {
+      "name": "Privacy",
+      "count": 15
+    },
+    {
+      "name": "Productivity",
+      "count": 23
+    },
+    {
+      "name": "provider",
+      "count": 55
+    },
+    {
+      "name": "Real Estate",
+      "count": 1
+    },
+    {
+      "name": "Recognition",
+      "count": 1
+    },
+    {
+      "name": "SaaS",
+      "count": 12
+    },
+    {
+      "name": "Security",
+      "count": 32
+    },
+    {
+      "name": "Self-Hosted",
+      "count": 17
+    },
+    {
+      "name": "Services",
+      "count": 3
+    },
+    {
+      "name": "Shopping",
+      "count": 32
+    },
+    {
+      "name": "Social",
+      "count": 38
+    },
+    {
+      "name": "Social Media",
+      "count": 1
+    },
+    {
+      "name": "Software",
+      "count": 3382
+    },
+    {
+      "name": "Split",
+      "count": 1
+    },
+    {
+      "name": "Sports",
+      "count": 2
+    },
+    {
+      "name": "Storage",
+      "count": 1
+    },
+    {
+      "name": "Telecommunications",
+      "count": 1
+    },
+    {
+      "name": "Testing",
+      "count": 2
+    },
+    {
+      "name": "Transportation",
+      "count": 10
+    },
+    {
+      "name": "Travel",
+      "count": 2
+    },
+    {
+      "name": "Vercel",
+      "count": 2
+    },
+    {
+      "name": "Voice",
+      "count": 1
+    },
+    {
+      "name": "VoidZero",
+      "count": 4
+    },
+    {
+      "name": "VPN",
+      "count": 1
+    },
+    {
+      "name": "Web",
+      "count": 2
+    },
+    {
+      "name": "Web3",
+      "count": 1
+    }
+  ]
+}
