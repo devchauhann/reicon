@@ -92,6 +92,9 @@ export default function Footer() {
               <Link to="/illustration" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 Illustrations
               </Link>
+              <Link to="/logos" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
+                Brand Logos
+              </Link>
               <Link to="/icons?weight=outline" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 Outline Icons
               </Link>

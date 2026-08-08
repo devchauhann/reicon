@@ -1,0 +1,108 @@
+{
+  "Google Family": {
+    "parent": "Google",
+    "brands": [
+      "Google",
+      "Android",
+      "YouTube",
+      "Chrome",
+      "Gmail",
+      "Google Cloud",
+      "Firebase",
+      "Nest",
+      "Waze",
+      "Fitbit",
+      "Google Maps"
+    ],
+    "description": "Google and its subsidiaries"
+  },
+  "Microsoft Family": {
+    "parent": "Microsoft",
+    "brands": [
+      "Microsoft",
+      "Windows",
+      "Visual Studio",
+      "Xbox",
+      "GitHub",
+      "Minecraft",
+      "LinkedIn",
+      "Skype"
+    ],
+    "description": "Microsoft and its subsidiaries"
+  },
+  "Apple Family": {
+    "parent": "Apple",
+    "brands": [
+      "Apple",
+      "iOS",
+      "macOS",
+      "iPhone",
+      "iPad",
+      "Apple Music",
+      "Apple TV+",
+      "Beats by Dre"
+    ],
+    "description": "Apple and its subsidiaries"
+  },
+  "Amazon Family": {
+    "parent": "Amazon",
+    "brands": [
+      "Amazon",
+      "AWS",
+      "Amazon Prime",
+      "Amazon Music",
+      "Kindle",
+      "Alexa",
+      "Twitch"
+    ],
+    "description": "Amazon and its subsidiaries"
+  },
+  "Meta Family": {
+    "parent": "Meta",
+    "brands": [
+      "Meta",
+      "Facebook",
+      "Instagram",
+      "WhatsApp",
+      "Threads",
+      "Oculus"
+    ],
+    "description": "Meta and its subsidiaries"
+  },
+  "Adobe Family": {
+    "parent": "Adobe",
+    "brands": [
+      "Adobe",
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "Premiere Pro",
+      "After Effects",
+      "Figma"
+    ],
+    "description": "Adobe and its subsidiaries"
+  },
+  "Alibaba Family": {
+    "parent": "Alibaba",
+    "brands": [
+      "Alibaba",
+      "AliExpress",
+      "Alipay",
+      "Alibaba Cloud",
+      "Taobao"
+    ],
+    "description": "Alibaba and its subsidiaries"
+  },
+  "Tencent Family": {
+    "parent": "Tencent",
+    "brands": [
+      "Tencent",
+      "WeChat",
+      "QQ",
+      "Honor of Kings",
+      "League of Legends",
+      "Riot Games"
+    ],
+    "description": "Tencent and its subsidiaries"
+  }
+}

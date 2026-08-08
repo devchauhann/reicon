@@ -1,4 +1,4 @@
-interface IllustrationPaginationProps {
+interface LogoPaginationProps {
   currentPage: number;
   totalPages: number;
   totalItems: number;
@@ -6,13 +6,13 @@ interface IllustrationPaginationProps {
   onPageChange: (page: number) => void;
 }
 
-export default function IllustrationPagination({
+export default function LogoPagination({
   currentPage,
   totalPages,
   totalItems,
   pageSize,
   onPageChange,
-}: IllustrationPaginationProps) {
+}: LogoPaginationProps) {
   if (totalPages <= 1) return null;
 
   const startItem = (currentPage - 1) * pageSize + 1;
@@ -113,7 +113,7 @@ export default function IllustrationPagination({
       {/* Items count summary */}
       <div className="text-xs font-mono text-text-base/40 text-center">
         Showing <span className="text-text-base/80 font-medium">{startItem.toLocaleString()}–{endItem.toLocaleString()}</span> of{' '}
-        <span className="text-text-base/80 font-medium">{totalItems.toLocaleString()}</span> illustrations
+        <span className="text-text-base/80 font-medium">{totalItems.toLocaleString()}</span> logos
       </div>
     </div>
   );
