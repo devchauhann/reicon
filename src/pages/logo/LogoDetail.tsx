@@ -62,20 +62,24 @@ export default function LogoDetail() {
   };
 
   const handleDownloadSvg = () => {
-    if (!logo) return;
+    if (!logo) {
+      flashToast('error');
+      return;
+    }
+    
     const activeUrl = logo.variants[selectedVariant] || getLogoUrl(logo.slug, selectedVariant);
+    const proxyUrl = activeUrl.replace('https://cdn.reicon.dev', '/cdn-proxy');
 
-    fetch(activeUrl)
+    fetch(proxyUrl)
       .then((res) => res.blob())
       .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
+        const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = `${logo.slug}-${selectedVariant}.svg`;
         document.body.appendChild(a);
         a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
         flashToast(`Downloaded ${logo.name} SVG!`);
       })
       .catch(() => {
@@ -84,8 +88,14 @@ export default function LogoDetail() {
   };
 
   const handleDownloadRaster = (format: 'png' | 'webp') => {
-    if (!logo) return;
+    if (!logo) {
+      flashToast('error');
+      return;
+    }
+    
     const activeUrl = logo.variants[selectedVariant] || getLogoUrl(logo.slug, selectedVariant);
+    const proxyUrl = activeUrl.replace("https://cdn.reicon.dev", "/cdn-proxy");
+    
     const canvas = document.createElement('canvas');
     canvas.width = exportSize;
     canvas.height = exportSize;
@@ -100,7 +110,7 @@ export default function LogoDetail() {
         const dataUrl = canvas.toDataURL(`image/${format}`);
         const a = document.createElement('a');
         a.href = dataUrl;
-        a.download = `${logo.slug}-${selectedVariant}-${exportSize}px.${format}`;
+        a.download = `${logo.slug}-${selectedVariant}-${exportSize}x${exportSize}.${format}`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -108,7 +118,7 @@ export default function LogoDetail() {
       }
     };
 
-    img.src = activeUrl;
+    img.src = proxyUrl;
   };
 
   const handleBack = () => {
