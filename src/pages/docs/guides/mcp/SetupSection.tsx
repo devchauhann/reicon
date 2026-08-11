@@ -21,7 +21,14 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         onCopy={() => onCopy(MCP_CONFIG, 'mcp-config')}
         copied={copiedField === 'mcp-config'}
       >
-        <span className="text-text-base/70">{MCP_CONFIG}</span>
+        <span className="text-text-base/70">{'{'}</span>{' \n'}
+        {'  '}<span className="text-[#e06c75]">&quot;mcpServers&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">{'{'}</span>{'\n'}
+        {'    '}<span className="text-[#e06c75]">&quot;reicon&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">{'{'}</span>{'\n'}
+        {'      '}<span className="text-[#e06c75]">&quot;command&quot;</span><span className="text-text-base/50">: </span><span className="text-[#98c379]">&quot;npx&quot;</span><span className="text-text-base/70">,</span>{'\n'}
+        {'      '}<span className="text-[#e06c75]">&quot;args&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">[</span><span className="text-[#98c379]">&quot;reicon-mcp&quot;</span><span className="text-text-base/70">]</span>{'\n'}
+        {'    '}<span className="text-text-base/70">{'}'}</span>{'\n'}
+        {'  '}<span className="text-text-base/70">{'}'}</span>{'\n'}
+        <span className="text-text-base/70">{'}'}</span>
       </SyntaxBlock>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4 mt-6">
@@ -33,7 +40,14 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         onCopy={() => onCopy(MCP_DEV_CONFIG, 'mcp-dev-config')}
         copied={copiedField === 'mcp-dev-config'}
       >
-        <span className="text-text-base/70">{MCP_DEV_CONFIG}</span>
+        <span className="text-text-base/70">{'{'}</span>{'\n'}
+        {'  '}<span className="text-[#e06c75]">&quot;mcpServers&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">{'{'}</span>{'\n'}
+        {'    '}<span className="text-[#e06c75]">&quot;reicon&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">{'{'}</span>{'\n'}
+        {'      '}<span className="text-[#e06c75]">&quot;command&quot;</span><span className="text-text-base/50">: </span><span className="text-[#98c379]">&quot;node&quot;</span><span className="text-text-base/70">,</span>{'\n'}
+        {'      '}<span className="text-[#e06c75]">&quot;args&quot;</span><span className="text-text-base/50">: </span><span className="text-text-base/70">[</span><span className="text-[#98c379]">&quot;./packages/reicon-mcp/bin/run.cjs&quot;</span><span className="text-text-base/70">]</span>{'\n'}
+        {'    '}<span className="text-text-base/70">{'}'}</span>{'\n'}
+        {'  '}<span className="text-text-base/70">{'}'}</span>{'\n'}
+        <span className="text-text-base/70">{'}'}</span>
       </SyntaxBlock>
     </>
   );
