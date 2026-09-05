@@ -44,8 +44,6 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
 
         <nav className="hidden md:flex items-center gap-0.5 absolute left-1/2 -translate-x-1/2 bg-text-base/[0.04] backdrop-blur-lg rounded-full p-1 shadow-2xs">
           <Link to="/icons" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">Icons</Link>
-          <Link to="/illustration" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">Illustration</Link>
-          <Link to="/logos" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">Logos</Link>
           <Link to="/docs" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">Docs</Link>
           <Link to="/packages" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">Packages</Link>
           <Link to="/faq" className="text-[13px] font-medium text-text-base/80 hover:text-text-base transition-colors px-3.5 py-1.5 rounded-full hover:bg-text-base/10">FAQ</Link>

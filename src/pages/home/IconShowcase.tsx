@@ -1,42 +1,42 @@
-export type OrbitItem =
-  | { type: 'icon'; name: string }
-  | { type: 'logo'; src: string; name: string };
+export interface OrbitIcon {
+  name: string;
+}
 
-const ORBIT_INNER: OrbitItem[] = [
-  { type: 'icon', name: 'home' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/google/original.svg', name: 'Google' },
-  { type: 'icon', name: 'star' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/claude/original.svg', name: 'Claude' },
-  { type: 'icon', name: 'search' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/openai/original.svg', name: 'OpenAI' },
+const ORBIT_INNER: OrbitIcon[] = [
+  { name: 'home' },
+  { name: 'star' },
+  { name: 'search' },
+  { name: 'heart' },
+  { name: 'bell' },
+  { name: 'user' },
 ];
 
-const ORBIT_MIDDLE: OrbitItem[] = [
-  { type: 'icon', name: 'camera' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/figma/original.svg', name: 'Figma' },
-  { type: 'icon', name: 'lightning' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/react/original.svg', name: 'React' },
-  { type: 'icon', name: 'palette' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/github/original.svg', name: 'GitHub' },
-  { type: 'icon', name: 'code' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/vercel/original.svg', name: 'Vercel' },
+const ORBIT_MIDDLE: OrbitIcon[] = [
+  { name: 'camera' },
+  { name: 'lightning' },
+  { name: 'palette' },
+  { name: 'code' },
+  { name: 'folder' },
+  { name: 'shield' },
+  { name: 'cart' },
+  { name: 'calendar' },
 ];
 
-const ORBIT_OUTER: OrbitItem[] = [
-  { type: 'icon', name: 'compass' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/apple/original.svg', name: 'Apple' },
-  { type: 'icon', name: 'wifi' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/stripe/original.svg', name: 'Stripe' },
-  { type: 'icon', name: 'pen' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/typescript/original.svg', name: 'TypeScript' },
-  { type: 'icon', name: 'lamp' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/nextjs/original.svg', name: 'Next.js' },
-  { type: 'icon', name: 'flag' },
-  { type: 'icon', name: 'rocket' },
+const ORBIT_OUTER: OrbitIcon[] = [
+  { name: 'compass' },
+  { name: 'wifi' },
+  { name: 'pen' },
+  { name: 'lamp' },
+  { name: 'flag' },
+  { name: 'rocket' },
+  { name: 'lock' },
+  { name: 'globe' },
+  { name: 'music' },
+  { name: 'eye' },
 ];
 
 function OrbitRing({ items, className, counterClassName, size }: {
-    items: OrbitItem[];
+    items: OrbitIcon[];
     className: string;
     counterClassName: string;
     size: string;
@@ -48,18 +48,11 @@ function OrbitRing({ items, className, counterClassName, size }: {
                     const rad = ((360 / items.length) * i * Math.PI) / 180;
                     const x = 50 + 50 * Math.cos(rad);
                     const y = 50 + 50 * Math.sin(rad);
-                    const key = item.type === 'icon' ? item.name : item.src;
                     return (
-                        <div key={key} className="absolute -translate-x-1/2 -translate-y-1/2" style={{ top: `${y}%`, left: `${x}%` }}>
+                        <div key={item.name} className="absolute -translate-x-1/2 -translate-y-1/2" style={{ top: `${y}%`, left: `${x}%` }}>
                             <div className={`w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl bg-text-base/4 border border-text-base/6 flex items-center justify-center shadow-2xs hover:scale-110 hover:border-[#9B8AFB]/40 transition-all duration-200 ${counterClassName}`} title={item.name}>
-                                {item.type === 'icon' ? (
-                                    <>
-                                        <re-icon icon={item.name} size={18} color="currentColor" className="text-text-base/70 sm:hidden" weight="outline" />
-                                        <re-icon icon={item.name} size={22} color="currentColor" className="text-text-base/70 hidden sm:block" weight="outline" />
-                                    </>
-                                ) : (
-                                    <img src={item.src} alt={item.name} className="w-4.5 h-4.5 sm:w-6 sm:h-6 object-contain" />
-                                )}
+                                <re-icon icon={item.name} size={18} color="currentColor" className="text-text-base/70 sm:hidden" weight="outline" />
+                                <re-icon icon={item.name} size={22} color="currentColor" className="text-text-base/70 hidden sm:block" weight="outline" />
                             </div>
                         </div>
                     );
@@ -69,14 +62,14 @@ function OrbitRing({ items, className, counterClassName, size }: {
     );
 }
 
-export default function IconShowcase({ theme }: { theme: string }) {
+export default function IconShowcase({ theme: _theme }: { theme: string }) {
     return (
         <section className="reveal max-w-[1160px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-16 overflow-hidden sm:overflow-visible">
             <div className="text-center mb-8 sm:mb-12 px-4">
-                <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#9B8AFB] mb-2">Icon &amp; Logo Library</div>
-                <h2 className="font-serif text-[clamp(26px,3.6vw,46px)] text-text-base leading-[1.15] tracking-[-0.02em] mb-3">2,700+ icons &amp; 4,900+ brand logos.</h2>
+                <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#9B8AFB] mb-2">Icon Library</div>
+                <h2 className="font-serif text-[clamp(26px,3.6vw,46px)] text-text-base leading-[1.15] tracking-[-0.02em] mb-3">2,700+ handcrafted icons.</h2>
                 <p className="text-[14px] sm:text-[15px] text-text-base/45 leading-[1.65] max-w-[490px] mx-auto">
-                    From UI essentials to popular tech brand logos — find exactly what you need.
+                    From UI essentials to developer tools — pixel-perfect vector icons for every interface.
                 </p>
             </div>
 

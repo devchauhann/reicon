@@ -13,8 +13,6 @@ interface MobileMenuProps {
 
 const navItems = [
   { to: '/icons', label: 'Icons' },
-  { to: '/illustration', label: 'Illustration' },
-  { to: '/logos', label: 'Logos' },
   { to: '/docs', label: 'Docs' },
   { to: '/packages', label: 'Packages' },
   { to: '/faq', label: 'FAQ' },

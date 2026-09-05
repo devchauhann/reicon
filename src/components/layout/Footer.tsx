@@ -75,8 +75,6 @@ export default function Footer() {
             <div className="relative flex flex-col gap-1">
               <div className="absolute left-[10px] top-[-4px] bottom-[4px] w-[1px] transform -translate-x-1/2 pointer-events-none" style={{ background: 'linear-gradient(to bottom, var(--border-base) 0%, var(--border-base) 60%, transparent 100%)' }} />
               <Link to="/icons" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">All Icons</Link>
-              <Link to="/illustration" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">Illustrations</Link>
-              <Link to="/logos" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">Brand Logos</Link>
               <Link to="/icons?style=outline" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">Outline Icons</Link>
               <Link to="/icons?style=filled" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">Filled Icons</Link>
               <Link to="/docs/vscode" className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">VS Code Extension</Link>

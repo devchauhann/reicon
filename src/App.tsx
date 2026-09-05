@@ -13,10 +13,6 @@ import { lazyWithRetry } from './lib/lazyWithRetry';
 const HomePage = lazyWithRetry(() => import('./pages/home/Home'));
 const IconsPage = lazyWithRetry(() => import('./pages/icons/IconsPage'));
 const IconDetail = lazyWithRetry(() => import('./pages/icon/IconDetail'));
-const IllustrationPage = lazyWithRetry(() => import('./pages/illustration/IllustrationPage'));
-const IllustrationDetail = lazyWithRetry(() => import('./pages/illustration/IllustrationDetail'));
-const LogoPage = lazyWithRetry(() => import('./pages/logo/LogoPage'));
-const LogoDetail = lazyWithRetry(() => import('./pages/logo/LogoDetail'));
 
 const DocsPage = lazyWithRetry(() => import('./pages/docs/DocsPage'));
 const PackagesPage = lazyWithRetry(() => import('./pages/packages/PackagesPage'));
@@ -35,19 +31,19 @@ function ScrollToTop() {
 }
 
 const VALID_ROUTES = [
-  '/', '/icons', '/illustration', '/logos', '/logo', '/packages', '/faq', '/support', '/donate', '/terms', '/privacy', '/license', '/pack'
+  '/', '/icons', '/packages', '/faq', '/support', '/donate', '/terms', '/privacy', '/license', '/pack'
 ];
 
 function isKnownRoute(pathname: string) {
   if (VALID_ROUTES.includes(pathname)) return true;
-  if (pathname.startsWith('/icon/') || pathname.startsWith('/illustration/') || pathname.startsWith('/logo/') || pathname.startsWith('/docs')) return true;
+  if (pathname.startsWith('/icon/') || pathname.startsWith('/docs')) return true;
   return false;
 }
 
 function Layout() {
   const { pathname } = useLocation();
   const is404 = !isKnownRoute(pathname);
-  const hideFooter = is404 || pathname === '/icons' || pathname === '/illustration' || pathname === '/logos' || pathname === '/logo' || pathname.startsWith('/docs');
+  const hideFooter = is404 || pathname === '/icons' || pathname.startsWith('/docs');
 
   return (
     <div className="min-h-screen bg-bg-base flex flex-col">
@@ -58,13 +54,6 @@ function Layout() {
             <Route path="/" element={<HomePage />} />
             <Route path="/icons" element={<IconsPage />} />
             <Route path="/icon/:name" element={<IconDetail />} />
-
-            <Route path="/illustration" element={<IllustrationPage />} />
-            <Route path="/illustration/:name" element={<IllustrationDetail />} />
-
-            <Route path="/logos" element={<LogoPage />} />
-            <Route path="/logo" element={<LogoPage />} />
-            <Route path="/logo/:name" element={<LogoDetail />} />
 
             <Route path="/docs" element={<DocsPage />} />
             <Route path="/docs/:framework" element={<DocsPage />} />

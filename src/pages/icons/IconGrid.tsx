@@ -5,7 +5,8 @@ import { Highlight } from '../../components/ui/Highlight';
 import { IconTooltipProvider } from '../../components/ui/IconTooltip';
 import type { DuotoneIconInfo } from '../../hooks/useDuotoneData';
 
-const BATCH_SIZE = 60;
+const INITIAL_BATCH = 120;
+const STEP_BATCH = 200;
 
 interface IconGridProps {
   filteredIcons: string[];
@@ -30,7 +31,7 @@ export default function IconGrid({
   duotoneMap,
   duotoneLoading,
 }: IconGridProps) {
-  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const totalCardsRef = useRef(0);
 
@@ -41,9 +42,22 @@ export default function IconGrid({
     return filteredIcons;
   }, [filteredIcons, activeStyle, duotoneMap]);
 
+  const totalCards = effectiveIcons.length;
+  totalCardsRef.current = totalCards;
+
   useEffect(() => {
-    setVisibleCount(BATCH_SIZE);
+    setVisibleCount(INITIAL_BATCH);
   }, [effectiveIcons, activeStyle]);
+
+  // Progressive auto-loader to continuously append icons in non-blocking frames
+  useEffect(() => {
+    if (visibleCount < totalCards) {
+      const timer = setTimeout(() => {
+        setVisibleCount((prev) => Math.min(prev + STEP_BATCH, totalCardsRef.current));
+      }, 16);
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, totalCards]);
 
   const visibleCards = useMemo(() => {
     if (activeStyle === 'Duotone' && duotoneMap) {
@@ -61,10 +75,7 @@ export default function IconGrid({
     ));
   }, [effectiveIcons, visibleCount, activeStyle, displaySize, displayWeight, duotoneMap]);
 
-  const totalCards = effectiveIcons.length;
   const hasMore = visibleCount < totalCards;
-
-  totalCardsRef.current = totalCards;
 
   const sentinelRef = useCallback((node: HTMLDivElement | null) => {
     if (observerRef.current) {
@@ -76,21 +87,15 @@ export default function IconGrid({
       (entries) => {
         if (!entries[0].isIntersecting) return;
         setVisibleCount((prev) => {
-          const next = Math.min(prev + BATCH_SIZE, totalCardsRef.current);
+          const next = Math.min(prev + STEP_BATCH, totalCardsRef.current);
           return next === prev ? prev : next;
         });
       },
-      { rootMargin: '600px' }
+      { rootMargin: '800px' }
     );
     observer.observe(node);
     observerRef.current = observer;
   }, []);
-
-  useEffect(() => {
-    if (hasMore) {
-      setVisibleCount((prev) => Math.min(prev + BATCH_SIZE, totalCards));
-    }
-  }, [filteredIcons, totalCards]);
 
   if (!ready || (activeStyle === 'Duotone' && duotoneLoading)) {
     return (

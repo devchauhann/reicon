@@ -13,10 +13,7 @@ export default function BrandsOverlay() {
 
   const isAllowedPage =
     pathname.startsWith('/icons') ||
-    pathname.startsWith('/icon/') ||
-    pathname.startsWith('/illustration') ||
-    pathname.startsWith('/logos') ||
-    pathname.startsWith('/logo');
+    pathname.startsWith('/icon/');
 
   useEffect(() => {
     if (!isAllowedPage) {

@@ -110,7 +110,7 @@ export default function DocsContent({
                 <section id="what-is-reicon" data-section className="mb-12 scroll-mt-24">
                   <SectionHeader id="what-is-reicon" title="What is Reicon?" level="h2" markdownContent={vanillaDocs} />
                   <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-                    Reicon is a free, open-source vector graphics library combining <strong>3,900+ UI icons</strong>, <strong>71,000+ vector illustrations</strong>, and <strong>4,900+ brand logos</strong>.
+                    Reicon is a free, open-source SVG icon library featuring <strong>2,700+ handcrafted UI icons</strong>.
                     The ecosystem offers native packages for <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon</code> (vanilla JS &amp; CDN),{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-react</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-react-native</code>,{' '}
@@ -119,7 +119,7 @@ export default function DocsContent({
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon_flutter</code>.
                   </p>
                   <p className="text-text-base/60 text-[15px] leading-[1.8]">
-                    Icons come in Outline, Filled, and Duotone weights with zero external dependencies and full tree-shakeability. Vector illustrations and brand logos are hosted on global CDNs for direct usage across any framework or design environment.
+                    Icons come in Outline and Filled weights with zero external dependencies and full tree-shakeability.
                   </p>
                 </section>
               </>

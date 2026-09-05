@@ -2,18 +2,16 @@
 
 ## 1. Identity
 
-**Reicon** (https://reicon.dev) is a free, open-source SVG icon & illustration library featuring:
+**Reicon** (https://reicon.dev) is a free, open-source SVG icon library featuring:
 - **2,700+ Handcrafted Icons**: Pixel-perfect icons on a 24×24 grid in Outline and Filled weights.
-- **71,000+ Free SVG Illustrations**: Doodling, object, people, mark, and scene vector graphics.
 
 - **Website**: https://reicon.dev
-- **Illustration Page**: https://reicon.dev/illustration
 - **GitHub**: https://github.com/dqev/reicon
 - **License**: MIT — free for personal and commercial use, no attribution required
 - **Creator**: Dev Chauhan (https://devchauhan.in)
 - **Contact**: hello@reicon.dev
 
-> ⚠️ **Disambiguation**: Reicon (reicon.dev) is an SVG icon & illustration library. It is **not** the Windows desktop icon restore tool "ReIcon" by Sordum.org — they are completely unrelated.
+> ⚠️ **Disambiguation**: Reicon (reicon.dev) is an SVG icon library. It is **not** the Windows desktop icon restore tool "ReIcon" by Sordum.org — they are completely unrelated.
 
 ---
 
